@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/drawable/background.xml" value="0.29814814814814816" />
+        <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/drawable/background_splash.xml" value="0.287962962962963" />
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/drawable/container_components.xml" value="0.29814814814814816" />
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/drawable/edit_text_background.xml" value="0.287962962962963" />
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/layout/activity_login.xml" value="0.32685185185185184" />
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Marcelo/AndroidStudioProjects/desafioMblabs/app/src/main/res/layout/activity_splash.xml" value="0.32685185185185184" />
       </map>
     </option>
   </component>
