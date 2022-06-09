@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">desafio Mblab\'s</string>
+    <string name="email">Email:</string>
+    <string name="senha">senha:</string>
+    <string name="login_button_text">Entrar</string>
+    <string name="does_not_have_account">Ainda não possui uma conta?</string>
 </resources>

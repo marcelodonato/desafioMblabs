@@ -2,6 +2,7 @@ package com.marcelodonato.desafiomblabs.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.marcelodonato.desafiomblabs.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
