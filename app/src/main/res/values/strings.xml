@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">desafio Mblab\'s</string>
-    <string name="email">Email:</string>
-    <string name="senha">senha:</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
     <string name="login_button_text">Entrar</string>
-    <string name="does_not_have_account">Ainda não possui uma conta?</string>
+    <string name="does_not_have_account">Ainda não possui uma conta? <b>Registar-se</b></string>
+    <string name="generic_error_edit_text">O campo não pode estar em branco</string>
+    <string name="email_error">Email incorreto </string>
+    <string name="password_error">Senha incorreta</string>
+    <string name="password_error_length">A senha não pode ser menor que 6 caracters</string>
+    <string name="unexpected_error">Ops...ocorreu um erro inesperado </string>
+    <string name="confirm_password">confirme sua senha</string>
+    <string name="register_name">nome:</string>
+    <string name="confirm_password_register">confirmar senha:</string>
+    <string name="register">Registrar-se</string>
+    <string name="already_has_account">Ja possui uma conta? <b>Logar.</b></string>
 </resources>
