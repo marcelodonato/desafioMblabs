@@ -10,25 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioMblabs">
         <activity
-            android:name=".splash.SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".CadasterItemActivity"
+            android:exported="true" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
         </activity>
+
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".register.RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".login.LoginActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".home.MainActivity"
-            android:exported="true" />
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

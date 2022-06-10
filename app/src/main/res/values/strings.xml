@@ -4,6 +4,7 @@
     <string name="password">Senha</string>
     <string name="login_button_text">Entrar</string>
     <string name="does_not_have_account">Ainda não possui uma conta? <b>Registar-se</b></string>
+    <string name="welcome_to_app">Encontre ingressos de Eventos para comprar e se divertir . Você pode alterar seu nome de usuário a qualquer momento.</string>
     <string name="generic_error_edit_text">O campo não pode estar em branco</string>
     <string name="email_error">Email incorreto </string>
     <string name="password_error">Senha incorreta</string>
