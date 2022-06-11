@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     if(list.size != 0){
                         listToCountAndGetNameId = list
                         setupRecycler(list)
-                    }
+                    }  
                 }
             }
 

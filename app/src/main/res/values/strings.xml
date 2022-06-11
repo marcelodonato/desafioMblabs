@@ -15,4 +15,6 @@
     <string name="confirm_password_register">confirmar senha:</string>
     <string name="register">Registrar-se</string>
     <string name="already_has_account">Ja possui uma conta? <b>Logar.</b></string>
+    <string name="price_event">Preço</string>
+    <string name="register_event_name">nome do evento</string>
 </resources>
