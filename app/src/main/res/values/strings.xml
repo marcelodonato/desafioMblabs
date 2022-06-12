@@ -17,4 +17,5 @@
     <string name="already_has_account">Ja possui uma conta? <b>Logar.</b></string>
     <string name="price_event">Preço</string>
     <string name="register_event_name">nome do evento</string>
+    <string name="description_event">Descrição</string>
 </resources>

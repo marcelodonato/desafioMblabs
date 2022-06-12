@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,40 +23,38 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="30dp" />
 
-
         <ImageView
-            android:id="@+id/img_cadaster_event"
+            android:id="@+id/img_register_event"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_marginTop="35dp"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-             />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/et_cadaster_event_name"
+            android:id="@+id/et_register_event_name"
             style="@style/edit_text"
             android:layout_marginTop="22dp"
             android:hint="@string/register_event_name"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toBottomOf="@+id/img_cadaster_event" />
+            app:layout_constraintTop_toBottomOf="@+id/img_register_event" />
 
         <EditText
-            android:id="@+id/et_cadaster_event_desc"
+            android:id="@+id/et_register_event_desc"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="22dp"
             android:layout_marginEnd="15dp"
             android:background="@drawable/edit_text_background"
-            android:hint="Descrição"
+            android:hint="@string/description_event"
             android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toBottomOf="@+id/et_cadaster_event_name" />
+            app:layout_constraintTop_toBottomOf="@+id/et_register_event_name" />
 
         <EditText
             android:id="@+id/et_cadaster_event_price"
@@ -67,7 +64,7 @@
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toBottomOf="@+id/et_cadaster_event_desc" />
+            app:layout_constraintTop_toBottomOf="@+id/et_register_event_desc" />
 
         <Button
             android:id="@+id/btn_login"
