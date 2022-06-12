@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
         binding.homeRv.adapter = MainAdapter(list)
     }
 
-
-
     private fun getOnDataBase(){
 
         val ref = FirebaseDatabase.getInstance().getReference("/events")
@@ -62,9 +60,7 @@ class MainActivity : AppCompatActivity() {
                 errorCase()
             }
         })
-
     }
-
 
     private fun errorCase() {
         Toast.makeText(this, R.string.unexpected_error,Toast.LENGTH_SHORT).show()
