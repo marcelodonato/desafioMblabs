@@ -3,13 +3,11 @@ package com.marcelodonato.desafiomblabs.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.marcelodonato.desafiomblabs.R
-import com.marcelodonato.desafiomblabs.common.extension.toast
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityHomeBinding
 
@@ -22,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         startBinding()
         getOnDatabase()
+        setupRecycler()
     }
 
     override fun onRestart() {
@@ -34,9 +33,40 @@ class HomeActivity : AppCompatActivity() {
         binding.root
     }
 
-    private fun setupRecycler(list: MutableList<MblabsEvents>) {
-        binding.homeRv.adapter = HomeAdapter(list)
+    private fun setupRecycler() {
+        binding.homeRv.adapter = HomeAdapter(mock())
     }
+
+    private fun mock(): MutableList<MblabsEvents> = mutableListOf(
+        MblabsEvents(
+            uid = "",
+            name = "evento 1",
+            desc = "qualquer coisa",
+            price = 25.50,
+            uri = "https://tradaq.com.br/wp-content/uploads/2018/08/MEDIDAS-IMAGENS-converted.jpg",
+        ),
+        MblabsEvents(
+            uid = "",
+            name = "evento 2",
+            desc = "qualquer coisa",
+            price = 25.50,
+            uri = "https://tradaq.com.br/wp-content/uploads/2018/08/MEDIDAS-IMAGENS-converted.jpg",
+        ),
+        MblabsEvents(
+            uid = "",
+            name = "evento 3",
+            desc = "qualquer coisa",
+            price = 25.50,
+            uri = "https://tradaq.com.br/wp-content/uploads/2018/08/MEDIDAS-IMAGENS-converted.jpg",
+        ),
+        MblabsEvents(
+            uid = "",
+            name = "evento 4",
+            desc = "qualquer coisa",
+            price = 25.50,
+            uri = "https://tradaq.com.br/wp-content/uploads/2018/08/MEDIDAS-IMAGENS-converted.jpg",
+        ),
+    )
 
     private fun getOnDatabase() {
         val ref = FirebaseDatabase.getInstance().getReference("/event")
