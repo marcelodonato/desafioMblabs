@@ -11,7 +11,7 @@ import com.marcelodonato.desafiomblabs.common.extension.confirmIfEmailIsValid
 import com.marcelodonato.desafiomblabs.common.extension.getEditText
 import com.marcelodonato.desafiomblabs.common.extension.validate
 import com.marcelodonato.desafiomblabs.databinding.ActivityLoginBinding
-import com.marcelodonato.desafiomblabs.home.MainActivity
+import com.marcelodonato.desafiomblabs.home.HomeActivity
 import com.marcelodonato.desafiomblabs.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun startHome(){
-        val homeIntent = Intent(this, MainActivity::class.java)
+        val homeIntent = Intent(this, HomeActivity::class.java)
         startActivity(homeIntent)
         finish()
     }

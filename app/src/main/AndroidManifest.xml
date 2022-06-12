@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.marcelodonato.desafiomblabs">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -26,7 +27,7 @@
             android:name=".register.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".home.MainActivity"
+            android:name=".home.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".cadasterEvent.RegisterEventActivity"

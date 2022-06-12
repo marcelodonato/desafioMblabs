@@ -13,7 +13,7 @@ import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.common.extension.getEditText
 import com.marcelodonato.desafiomblabs.common.extension.toast
 import com.marcelodonato.desafiomblabs.common.extension.validate
-import com.marcelodonato.desafiomblabs.common.model.Event
+import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityRegisterEventBinding
 import java.util.*
 import com.google.firebase.storage.FirebaseStorage
@@ -68,8 +68,8 @@ class RegisterEventActivity : AppCompatActivity() {
 
     private fun addEventToDatabase(name: String, desc: String, price: Double, uri: String) {
         val id = UUID.randomUUID().toString()
-        val ref = FirebaseDatabase.getInstance().getReference("/events/$id")
-        val events = Event(
+        val ref = FirebaseDatabase.getInstance().getReference("/event/$id")
+        val events = MblabsEvents(
             uid = id, name = name, desc = desc, price = price, uri = uri
         )
         ref.setValue(events)
@@ -85,7 +85,7 @@ class RegisterEventActivity : AppCompatActivity() {
 
     private fun addImgEventToStore() {
         val id = UUID.randomUUID().toString()
-        val ref = FirebaseStorage.getInstance().getReference("/events/$id")
+        val ref = FirebaseStorage.getInstance().getReference("/event/$id")
         imgEvent?.let { img ->
             ref.putFile(img)
                 .addOnSuccessListener {
