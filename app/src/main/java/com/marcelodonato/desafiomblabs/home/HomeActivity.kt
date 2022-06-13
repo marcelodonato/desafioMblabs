@@ -2,6 +2,7 @@ package com.marcelodonato.desafiomblabs.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -34,7 +35,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupRecycler() {
-        binding.homeRv.adapter = HomeAdapter(mock())
+        binding.rvHome.adapter = HomeAdapter(mock())
+
+
+
     }
 
     private fun mock(): MutableList<MblabsEvents> = mutableListOf(
@@ -67,6 +71,8 @@ class HomeActivity : AppCompatActivity() {
             uri = "https://tradaq.com.br/wp-content/uploads/2018/08/MEDIDAS-IMAGENS-converted.jpg",
         ),
     )
+
+
 
     private fun getOnDatabase() {
         val ref = FirebaseDatabase.getInstance().getReference("/event")

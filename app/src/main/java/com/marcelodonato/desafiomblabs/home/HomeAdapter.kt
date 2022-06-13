@@ -3,9 +3,11 @@ package com.marcelodonato.desafiomblabs.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.EventItemBinding
 
@@ -33,13 +35,16 @@ class HomeAdapter(
         val eventList = items[position]
 
         holder.binding.apply {
-            itemEventName.text = eventList.name
-            itemEventDesc.text = eventList.desc
-            Glide.with(holder.binding.itemEventImg).load(eventList.uri.toUri()).into(itemEventImg)
+            tvNameEvent.text = eventList.name
+            tvDescEvent.text = eventList.desc
+            Glide.with(holder.binding.ivEvent).load(eventList.uri.toUri()).into(ivEvent)
+
             cvContainerEvent.setOnClickListener {
                 onItemClick?.invoke(eventList, position)
+
             }
         }
     }
+
 
 }

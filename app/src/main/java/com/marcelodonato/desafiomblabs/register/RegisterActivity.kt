@@ -29,49 +29,54 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun validateFields() {
-        val name = binding.userName.validate()
-        val email = binding.registerEmail.validate()
-        val password = binding.registerPassword.validate()
+        val name = binding.etNameRegister.validate()
+        val email = binding.etEmailRegister.validate()
+        val password = binding.etPasswordRegister.validate()
         val confirmPassword =
-            binding.registerConfirmPassword.getEditText() != binding.registerPassword.getEditText()
-        val passwordLength = binding.registerPassword.length() !in 6..63
-        val confirmEmail = confirmIfEmailIsValid(binding.registerEmail.getEditText())
+            binding.etConfirmPasswordRegister.getEditText() != binding.etPasswordRegister.getEditText()
+        val passwordLength = binding.etPasswordRegister.length() !in 6..63
+        val confirmEmail = confirmIfEmailIsValid(binding.etEmailRegister.getEditText())
 
         when {
-            name -> binding.userName.error = getString(R.string.generic_error_edit_text)
-            email -> binding.registerEmail.error = getString(R.string.generic_error_edit_text)
-            confirmEmail -> binding.registerEmail.error = getString(R.string.email_error)
-            password -> binding.registerPassword.error = getString(R.string.generic_error_edit_text)
-            passwordLength -> binding.registerPassword.error =
+            name -> binding.etNameRegister.error =
+                getString(R.string.generic_error_edit_text, getString(R.string.register_name))
+            email -> binding.etEmailRegister.error =
+                getString(R.string.generic_error_edit_text, getString(R.string.email))
+            confirmEmail -> binding.etEmailRegister.error = getString(R.string.email_error)
+            password -> binding.etPasswordRegister.error =
+                getString(R.string.generic_error_edit_text, getString(R.string.password))
+            passwordLength -> binding.etPasswordRegister.error =
                 getString(R.string.password_error_length)
-            confirmPassword -> binding.registerConfirmPassword.error =
+            confirmPassword -> binding.etConfirmPasswordRegister.error =
                 getString(R.string.confirm_password)
-
             else -> {
-                registerToFirebase(binding.registerEmail.getEditText(), binding.registerPassword.getEditText())
+                registerToFirebase(
+                    binding.etEmailRegister.getEditText(),
+                    binding.etPasswordRegister.getEditText()
+                )
             }
         }
     }
 
     private fun registerToFirebase(email: String, password: String) {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email , password)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { finish() }
             .addOnFailureListener { errorCase() }
     }
 
-    private fun registerButton(){
+    private fun registerButton() {
         binding.btnRegister.setOnClickListener {
             validateFields()
         }
     }
 
-    private fun goBackToLogin(){
-        binding.txtRegister.setOnClickListener {
+    private fun goBackToLogin() {
+        binding.tvRegister.setOnClickListener {
             finish()
         }
     }
 
     private fun errorCase() {
-        Toast.makeText(this, getString(R.string.unexpected_error),Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.unexpected_error), Toast.LENGTH_SHORT).show()
     }
 }

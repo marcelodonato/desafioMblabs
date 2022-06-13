@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.cadasterEvent
+package com.marcelodonato.desafiomblabs.registerEvent
 
 import android.app.Activity
 import android.content.Intent

@@ -4,16 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.databinding.DataBindingUtil
 import com.marcelodonato.desafiomblabs.R
-import com.marcelodonato.desafiomblabs.cadasterEvent.RegisterEventActivity
+import com.marcelodonato.desafiomblabs.databinding.ActivitySplashBinding
 import com.marcelodonato.desafiomblabs.home.HomeActivity
-import com.marcelodonato.desafiomblabs.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivitySplashBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        startBinding()
         Handler().postDelayed(
             {
                 startWelcome()
@@ -21,6 +23,10 @@ class SplashActivity : AppCompatActivity() {
         )
     }
 
+    private fun startBinding() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
+        binding.root
+    }
 
     private fun startWelcome() {
         val intent = Intent(baseContext, HomeActivity::class.java)

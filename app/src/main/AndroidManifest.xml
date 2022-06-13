@@ -30,7 +30,7 @@
             android:name=".home.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".cadasterEvent.RegisterEventActivity"
+            android:name=".registerEvent.RegisterEventActivity"
             android:exported="true" />
     </application>
 

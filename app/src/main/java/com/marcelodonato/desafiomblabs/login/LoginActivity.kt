@@ -30,22 +30,22 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validateFields() {
-        val email = binding.loginEmail.validate()
-        val confirmEmail = confirmIfEmailIsValid(binding.loginEmail.getEditText())
-        val password = binding.loginPassword.validate()
+        val email = binding.etEmailLogin.validate()
+        val confirmEmail = confirmIfEmailIsValid(binding.etEmailLogin.getEditText())
+        val password = binding.etPasswordLogin.validate()
 
         when {
-            email -> binding.loginEmail.error = getString(R.string.generic_error_edit_text)
-            confirmEmail -> binding.loginEmail.error = getString(R.string.email_error)
-            password -> binding.loginPassword.error = getString(R.string.password_error)
+            email -> binding.etEmailLogin.error =
+                getString(R.string.generic_error_edit_text, getString(R.string.email))
+            confirmEmail -> binding.etEmailLogin.error = getString(R.string.email_error)
+            password -> binding.etPasswordLogin.error = getString(R.string.password_error)
             else -> {
                 loginFirebase(
-                    binding.loginEmail.getEditText(),
-                    binding.loginPassword.getEditText()
+                    binding.etEmailLogin.getEditText(),
+                    binding.etPasswordLogin.getEditText()
                 )
             }
         }
-
     }
 
     private fun loginFirebase(email: String, password: String) {
@@ -59,11 +59,10 @@ class LoginActivity : AppCompatActivity() {
                 }
             }.addOnFailureListener {
                 Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
-
             }
     }
 
-    private fun startHome(){
+    private fun startHome() {
         val homeIntent = Intent(this, HomeActivity::class.java)
         startActivity(homeIntent)
         finish()
@@ -76,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun clickToRegister() {
-        binding.txtLogin.setOnClickListener {
+        binding.tvLogin.setOnClickListener {
             goToRegisterActivity()
         }
     }
