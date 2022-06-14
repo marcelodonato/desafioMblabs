@@ -41,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
             confirmEmail -> binding.etEmailLogin.error = getString(R.string.email_error)
             password -> binding.etPasswordLogin.error = getString(R.string.password_error)
             else -> {
+                binding.incLoader.frameLoadingBackground.visibility = View.VISIBLE
                 loginFirebase(
                     binding.etEmailLogin.getEditText(),
                     binding.etPasswordLogin.getEditText()
@@ -71,7 +72,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validatedLogin() {
         binding.btnLogin.setOnClickListener {
-            binding.progressLogin.visibility = View.VISIBLE
             validateFields()
         }
     }

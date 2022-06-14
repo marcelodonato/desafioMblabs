@@ -18,6 +18,7 @@ import com.marcelodonato.desafiomblabs.registerEvent.RegisterEventActivity
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+    private var list : MutableList<MblabsEvents>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
+        getOnDatabase()
     }
 
     private fun startBinding() {
@@ -57,7 +59,6 @@ class HomeActivity : AppCompatActivity() {
                     dataSnapshot.getValue(MblabsEvents::class.java)
                 }.let { list ->
                     if (list.size != 0) {
-                        toast(list.size.toString())
                         setupRecycler(list)
                     }
                 }
