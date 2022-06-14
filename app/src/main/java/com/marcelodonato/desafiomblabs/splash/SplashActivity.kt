@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.databinding.ActivitySplashBinding
 import com.marcelodonato.desafiomblabs.home.HomeActivity
+import com.marcelodonato.desafiomblabs.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun startWelcome() {
-        val intent = Intent(baseContext, HomeActivity::class.java)
+        val intent = Intent(baseContext, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         finish()

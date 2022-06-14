@@ -1,6 +1,7 @@
 package com.marcelodonato.desafiomblabs.home
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -45,6 +46,4 @@ class HomeAdapter(
             }
         }
     }
-
-
 }

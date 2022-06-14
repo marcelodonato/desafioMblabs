@@ -23,9 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="@string/event_name_ingress"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,13 +71,13 @@
             app:layout_constraintTop_toTopOf="@+id/tv_quantities_ticket" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_quantity_ticket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="1"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_remove_ticket"
             app:layout_constraintStart_toEndOf="@+id/tv_remove_ticket"
@@ -93,9 +92,9 @@
             android:textColor="@android:color/holo_green_light"
             android:textSize="15dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_quantity_ticket"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_ticket"
+            app:layout_constraintTop_toTopOf="@+id/tv_quantity_ticket" />
 
         <TextView
             android:id="@+id/tv_price_event_ticket"

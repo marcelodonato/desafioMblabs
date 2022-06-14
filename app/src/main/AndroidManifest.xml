@@ -15,10 +15,7 @@
         <activity
             android:name=".splash.SplashActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".login.LoginActivity"
@@ -28,10 +25,16 @@
             android:exported="true" />
         <activity
             android:name=".home.HomeActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".registerEvent.RegisterEventActivity"
             android:exported="true" />
+
     </application>
 
 </manifest>
