@@ -2,7 +2,9 @@ package com.marcelodonato.desafiomblabs.home
 
 import android.app.Dialog
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
+import android.view.View.VISIBLE
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.core.net.toUri
@@ -56,6 +58,12 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
             }
         }
         binding.btnBuyTicket.setOnClickListener {
+            binding.animationBuyTicket.visibility = VISIBLE
+            Handler().postDelayed(
+                {
+                    dialog?.cancel()
+                }, 2500.toLong()
+            )
         }
 
         Glide.with(binding.ivEventTicket).load(events.uri.toUri()).into(binding.ivEventTicket)

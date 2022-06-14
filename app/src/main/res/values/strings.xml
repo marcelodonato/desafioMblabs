@@ -27,14 +27,14 @@
     <string name="register_event_button">Registar Evento</string>
     <string name="register_add_img_event"><u>Adicionar image</u></string>
     <!--Dialog screen-->
-    <string name="price_ingress">Preço: </string>
-    <string name="price_ticket">R$%1$.2f</string>
+    <string name="price_ingress">Preço:  </string>
+    <string name="price_ticket"> R$%1$.2f</string>
     <string name="event_name_ingress">Event name</string>
     <string name="register_description_event_ingress">Encontre ingressos de Eventos para comprar e se divertir . Você pode alterar seu nome de usuário a qualquer momento.</string>
     <string name="ticket_quantities">Quantidade de ingressos:</string>
     <string name="remove_ticket">-</string>
     <string name="add_ticket">+</string>
     <string name="btn_buy_ticket">Comprar ingresso</string>
-    <string name="price_event_ticket">0.0</string>
+    <string name="price_event_ticket"> 0.0</string>
 
 </resources>
