@@ -1,23 +1,25 @@
 <resources>
     <string name="app_name">Desafio Mblab\'s</string>
+
     <!--Login Screen-->
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
     <string name="login_button_text">Entrar</string>
     <string name="does_not_have_account">Ainda não possui uma conta? <b>Registar-se</b></string>
-<!--    Message Error App-->
+    <!--    Message Error App-->
     <string name="generic_error_edit_text">O campo %s não pode estar em branco</string>
     <string name="email_error">Email incorreto </string>
     <string name="password_error">Senha incorreta</string>
     <string name="password_error_length">A senha não pode ser menor que 6 caracters</string>
     <string name="unexpected_error">Ops...ocorreu um erro inesperado </string>
-<!--   Register screen-->
+    <!--   Register screen-->
     <string name="confirm_password">Confirme sua senha</string>
     <string name="register_name">Nome:</string>
     <string name="confirm_password_register">Confirmar senha:</string>
     <string name="register">Registrar-se</string>
     <string name="already_has_account">Ja possui uma conta? <b>Logar.</b></string>
     <!--Register Event screen-->
+    <string name="btn_register_event_home">Cadastre seu evento </string>
     <string name="register_img_message_error">Adicione uma image para continuar</string>
     <string name="register_price_event">Preço</string>
     <string name="register_event_name">Nome do evento</string>
@@ -33,5 +35,6 @@
     <string name="remove_ticket">-</string>
     <string name="add_ticket">+</string>
     <string name="btn_buy_ticket">Comprar ingresso</string>
-    <string name="btn_register_event_home">Cadastre seu evento </string>
+    <string name="price_event_ticket">0.0</string>
+
 </resources>

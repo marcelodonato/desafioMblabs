@@ -42,9 +42,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="3"
-                android:ellipsize="end"
                 android:text="@string/register_description_event"
                 android:textSize="12sp" />
 

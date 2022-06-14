@@ -17,7 +17,6 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
     private var quantity: Int = 1
     private lateinit var binding: DialogBuyTicketBinding
 
-
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = DialogBuyTicketBinding.inflate(LayoutInflater.from(context))
         return AlertDialog.Builder(requireActivity())
@@ -60,14 +59,13 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
         }
 
         Glide.with(binding.ivEventTicket).load(events.uri.toUri()).into(binding.ivEventTicket)
-
     }
 
     private fun setValue(value: Double): Double {
         return value * quantity
     }
 
-    private fun closeDialog(){
+    private fun closeDialog() {
         binding.btnCloseTicket.setOnClickListener {
             dialog?.cancel()
         }

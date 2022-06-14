@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
+            android:text="@string/event_name_ingress"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -50,13 +50,13 @@
             android:gravity="start"
             android:maxLines="3"
             android:text="@string/register_description_event_ingress"
-            android:textSize="12dp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name_event_ticket" />
 
         <TextView
-            android:id="@+id/tv_quantities_ticket"
+            android:id="@+id/tv_ticket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -77,9 +77,9 @@
             android:textColor="@android:color/holo_red_dark"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_quantities_ticket"
-            app:layout_constraintStart_toEndOf="@+id/tv_quantities_ticket"
-            app:layout_constraintTop_toTopOf="@+id/tv_quantities_ticket" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ticket"
+            app:layout_constraintStart_toEndOf="@+id/tv_ticket"
+            app:layout_constraintTop_toTopOf="@+id/tv_ticket" />
 
         <TextView
             android:id="@+id/tv_quantity_ticket"
@@ -118,13 +118,13 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_quantities_ticket" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ticket" />
 
         <TextView
             android:id="@+id/tv_price_ticket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.0"
+            android:text="@string/price_event_ticket"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_price_event_ticket"
