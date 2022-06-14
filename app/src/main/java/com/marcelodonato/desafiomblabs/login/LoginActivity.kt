@@ -3,6 +3,7 @@ package com.marcelodonato.desafiomblabs.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
@@ -70,6 +71,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validatedLogin() {
         binding.btnLogin.setOnClickListener {
+            binding.progressLogin.visibility = View.VISIBLE
             validateFields()
         }
     }

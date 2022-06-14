@@ -7,7 +7,6 @@ import android.os.Handler
 import androidx.databinding.DataBindingUtil
 import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.databinding.ActivitySplashBinding
-import com.marcelodonato.desafiomblabs.home.HomeActivity
 import com.marcelodonato.desafiomblabs.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {

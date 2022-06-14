@@ -6,7 +6,6 @@ import android.widget.EditText
 import android.widget.Toast
 import java.util.regex.Pattern
 
-
 fun EditText.getEditText() = text.toString().trim()
 fun EditText.validate() = text.toString().trim().isEmpty()
 fun Activity.toast(message: String) = Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

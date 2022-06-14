@@ -20,7 +20,6 @@ class RegisterActivity : AppCompatActivity() {
         startBinding()
         registerButton()
         goBackToLogin()
-
     }
 
     private fun startBinding() {

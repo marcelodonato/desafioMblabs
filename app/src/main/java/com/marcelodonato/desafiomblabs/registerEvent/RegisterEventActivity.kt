@@ -28,6 +28,7 @@ class RegisterEventActivity : AppCompatActivity() {
         starBinding()
         getImgGallery()
         registerEvent()
+        goBackToHome()
     }
 
     private fun starBinding() {
@@ -37,7 +38,7 @@ class RegisterEventActivity : AppCompatActivity() {
 
     private fun registerEvent() {
         binding.btnRegisterEvent.setOnClickListener {
-            binding.incLoader.frameLoadingBackground.visibility = VISIBLE
+
             validateDataBaseFields()
         }
     }
@@ -62,6 +63,7 @@ class RegisterEventActivity : AppCompatActivity() {
             )
             else -> {
                 addImgEventToStore()
+                binding.incLoader.frameLoadingBackground.visibility = VISIBLE
             }
         }
     }
@@ -128,5 +130,11 @@ class RegisterEventActivity : AppCompatActivity() {
 
     private fun hideLoading() {
         binding.incLoader.frameLoadingBackground.visibility = GONE
+    }
+
+    private fun goBackToHome() {
+        binding.btnBackHome.setOnClickListener {
+            finish()
+        }
     }
 }
