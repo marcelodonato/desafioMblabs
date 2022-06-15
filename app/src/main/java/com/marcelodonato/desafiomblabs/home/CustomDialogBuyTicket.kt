@@ -29,7 +29,7 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
     override fun onStart() {
         super.onStart()
         dialog?.window?.setLayout(
-            WindowManager.LayoutParams.WRAP_CONTENT,
+            WindowManager.LayoutParams.MATCH_PARENT,
             WindowManager.LayoutParams.WRAP_CONTENT
         )
         setValuesTicket()
@@ -37,11 +37,11 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
     }
 
     private fun setValuesTicket() {
-
         binding.tvNameEventTicket.text = events.name
         binding.tvDateEventTicket.text = events.date
         binding.tvDescEventTicket.text = events.desc
         binding.tvPriceTicket.text = events.price.toString()
+
         binding.tvAddTicket.setOnClickListener {
             quantity++
             binding.tvQuantityTicket.text = quantity.toString()
@@ -58,15 +58,11 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
                     getString(R.string.price_ticket, setValue(events.price))
             }
         }
+
         binding.btnBuyTicket.setOnClickListener {
             binding.animationBuyTicket.visibility = VISIBLE
-            Handler().postDelayed(
-                {
-                    dialog?.cancel()
-                }, 2500.toLong()
-            )
+            Handler().postDelayed({ dialog?.cancel() }, 2500.toLong())
         }
-
         Glide.with(binding.ivEventTicket).load(events.uri.toUri()).into(binding.ivEventTicket)
     }
 

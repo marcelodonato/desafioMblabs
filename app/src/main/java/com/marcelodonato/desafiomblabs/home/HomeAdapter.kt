@@ -11,8 +11,7 @@ import com.marcelodonato.desafiomblabs.databinding.EventItemBinding
 class HomeAdapter(
     private val items: MutableList<MblabsEvents>,
     private val onItemClick: ((item: MblabsEvents, index: Int) -> Unit)? = null
-) :
-    RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
         return ViewHolder(

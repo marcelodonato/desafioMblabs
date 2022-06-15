@@ -52,5 +52,4 @@ class SplashActivity : AppCompatActivity() {
             startLogin()
         }
     }
-
 }

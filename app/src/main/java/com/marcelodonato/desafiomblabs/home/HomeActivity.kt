@@ -49,6 +49,7 @@ class HomeActivity : AppCompatActivity() {
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
 
             override fun onCancelled(error: DatabaseError) {
+
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {

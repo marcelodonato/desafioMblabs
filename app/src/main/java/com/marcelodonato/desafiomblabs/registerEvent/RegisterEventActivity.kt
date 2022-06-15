@@ -40,7 +40,6 @@ class RegisterEventActivity : AppCompatActivity() {
 
     private fun registerEvent() {
         binding.btnRegisterEvent.setOnClickListener {
-
             validateDataBaseFields()
         }
     }
@@ -60,7 +59,8 @@ class RegisterEventActivity : AppCompatActivity() {
                 R.string.generic_error_edit_text,
                 getString(R.string.register_description_event)
             )
-            date -> binding.etRegisterDate.error = getString(R.string.generic_error_edit_text , getString(R.string.register_date))
+            date -> binding.etRegisterDate.error =
+                getString(R.string.generic_error_edit_text, getString(R.string.register_date))
             price -> binding.etRegisterEventPrice.error = getString(
                 R.string.generic_error_edit_text,
                 getString(R.string.register_price_event)
@@ -72,7 +72,13 @@ class RegisterEventActivity : AppCompatActivity() {
         }
     }
 
-    private fun addEventToDatabase(name: String, desc: String, price: Double, uri: String, date: String) {
+    private fun addEventToDatabase(
+        name: String,
+        desc: String,
+        price: Double,
+        uri: String,
+        date: String
+    ) {
         val id = SimpleDateFormat(format, Locale.US).format(System.currentTimeMillis())
         val ref = FirebaseDatabase.getInstance().getReference("/event/$id")
         val events = MblabsEvents(
