@@ -13,33 +13,48 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="6dp"
-            android:src="@drawable/ic_close"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_close" />
 
         <ImageView
             android:id="@+id/iv_event_ticket"
-            android:layout_width="0dp"
+            android:layout_width="411dp"
             android:layout_height="260dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/event_test_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_close_ticket" />
 
         <TextView
             android:id="@+id/tv_name_event_ticket"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="@string/event_name_ingress"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date_event_ticket"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_event_ticket" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_event_ticket"
+            tools:text="@string/event_name_ingress" />
+
+        <TextView
+            android:id="@+id/tv_date_event_ticket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_name_event_ticket"
+            app:layout_constraintTop_toBottomOf="@+id/iv_event_ticket"
+            tools:text="11/11/1111" />
 
         <TextView
             android:id="@+id/tv_desc_event_ticket"
@@ -51,7 +66,7 @@
             android:gravity="start"
             android:maxLines="3"
             android:text="@string/register_description_event_ingress"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name_event_ticket" />
@@ -76,7 +91,7 @@
             android:gravity="center"
             android:text="@string/remove_ticket"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_ticket"
             app:layout_constraintStart_toEndOf="@+id/tv_ticket"
@@ -150,17 +165,19 @@
             android:id="@+id/animation_buy_ticket"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black_translucent"
             android:layout_gravity="center"
+            android:background="@color/black_translucent"
             android:visibility="gone"
-            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/ticket" />
+            app:lottie_rawRes="@raw/ticket"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -30,10 +30,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:text="Event name"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Nome do evento" />
+
+            <TextView
+                android:id="@+id/tv_date_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="22/22/22" />
 
             <TextView
                 android:id="@+id/tv_desc_event"
@@ -45,8 +55,8 @@
                 android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="3"
-                android:text="@string/register_description_event"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="@string/register_description_event" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

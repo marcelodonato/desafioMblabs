@@ -62,6 +62,7 @@
                 style="@style/edit_text"
                 android:layout_marginTop="22dp"
                 android:hint="@string/register_event_name"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@+id/tv_register_img" />
@@ -79,6 +80,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/et_register_event_name" />
 
             <EditText
+                android:id="@+id/et_register_date"
+                style="@style/edit_text"
+                android:layout_marginTop="22dp"
+                android:hint="@string/register_date"
+                android:maxLength="10"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/et_register_event_desc" />
+
+            <EditText
                 android:id="@+id/et_register_event_price"
                 style="@style/edit_text"
                 android:layout_marginTop="22dp"
@@ -86,7 +97,7 @@
                 android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@+id/et_register_event_desc" />
+                app:layout_constraintTop_toBottomOf="@+id/et_register_date" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_register_event"

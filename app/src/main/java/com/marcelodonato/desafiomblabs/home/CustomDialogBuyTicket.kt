@@ -39,6 +39,7 @@ class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment()
     private fun setValuesTicket() {
 
         binding.tvNameEventTicket.text = events.name
+        binding.tvDateEventTicket.text = events.date
         binding.tvDescEventTicket.text = events.desc
         binding.tvPriceTicket.text = events.price.toString()
         binding.tvAddTicket.setOnClickListener {

@@ -7,5 +7,6 @@ data class MblabsEvents(
     val name: String = "",
     val desc: String = "",
     val price: Double = 0.0,
-    val uri: String = ""
+    val uri: String = "",
+    val date: String = ""
 ) : Serializable

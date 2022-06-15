@@ -17,11 +17,13 @@ import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityRegisterEventBinding
 import java.util.*
 import com.google.firebase.storage.FirebaseStorage
+import java.text.SimpleDateFormat
 
 class RegisterEventActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterEventBinding
     private var imgEvent: Uri? = null
+    private val format = "yyyy-MM-dd-HH-mm-ss-SSS"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +50,7 @@ class RegisterEventActivity : AppCompatActivity() {
         val desc = binding.etRegisterEventDesc.validate()
         val price = binding.etRegisterEventPrice.validate()
         val img = imgEvent == null
+        val date = binding.etRegisterDate.validate()
 
         when {
             img -> toast(getString(R.string.register_img_message_error))
@@ -57,6 +60,7 @@ class RegisterEventActivity : AppCompatActivity() {
                 R.string.generic_error_edit_text,
                 getString(R.string.register_description_event)
             )
+            date -> binding.etRegisterDate.error = getString(R.string.generic_error_edit_text , getString(R.string.register_date))
             price -> binding.etRegisterEventPrice.error = getString(
                 R.string.generic_error_edit_text,
                 getString(R.string.register_price_event)
@@ -68,11 +72,11 @@ class RegisterEventActivity : AppCompatActivity() {
         }
     }
 
-    private fun addEventToDatabase(name: String, desc: String, price: Double, uri: String) {
-        val id = UUID.randomUUID().toString()
+    private fun addEventToDatabase(name: String, desc: String, price: Double, uri: String, date: String) {
+        val id = SimpleDateFormat(format, Locale.US).format(System.currentTimeMillis())
         val ref = FirebaseDatabase.getInstance().getReference("/event/$id")
         val events = MblabsEvents(
-            uid = id, name = name, desc = desc, price = price, uri = uri
+            uid = id, name = name, desc = desc, price = price, uri = uri, date = date
         )
         ref.setValue(events)
             .addOnSuccessListener {
@@ -96,7 +100,8 @@ class RegisterEventActivity : AppCompatActivity() {
                             binding.etRegisterEventName.getEditText(),
                             binding.etRegisterEventDesc.getEditText(),
                             binding.etRegisterEventPrice.getEditText().toDouble(),
-                            responseImg.toString()
+                            responseImg.toString(),
+                            binding.etRegisterDate.getEditText()
                         )
                     }
                 }

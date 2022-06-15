@@ -33,6 +33,7 @@ class HomeAdapter(
 
         holder.binding.apply {
             tvNameEvent.text = eventList.name
+            tvDateEvent.text = eventList.date
             tvDescEvent.text = eventList.desc
             Glide.with(holder.binding.ivEvent).load(eventList.uri.toUri()).into(ivEvent)
             cvContainerEvent.setOnClickListener {
