@@ -12,4 +12,5 @@
     <color name="purple_medium">#8958C1</color>
     <color name="purple_light">#B69AD6</color>
     <color name="black_translucent">#80000000</color>
+    <color name="ice_white">#F8F8FF</color>
 </resources>
