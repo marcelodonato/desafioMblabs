@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -12,22 +13,36 @@ import com.google.firebase.database.ValueEventListener
 import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityHomeBinding
+import com.marcelodonato.desafiomblabs.login.LoginActivity
 import com.marcelodonato.desafiomblabs.registerEvent.RegisterEventActivity
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+    private lateinit var user: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         startBinding()
         getOnDatabase()
         btnGoToRegisterEvent()
+        logout()
     }
 
     override fun onRestart() {
         super.onRestart()
         getOnDatabase()
+    }
+
+    private fun logout() {
+        user = FirebaseAuth.getInstance()
+        binding.ivLogoHome.setOnClickListener {
+            user.signOut()
+            startActivity(
+                Intent(this, LoginActivity::class.java)
+            )
+            finish()
+        }
     }
 
     private fun startBinding() {
