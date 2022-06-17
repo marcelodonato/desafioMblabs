@@ -37,5 +37,6 @@
     <string name="add_ticket">+</string>
     <string name="btn_buy_ticket">Comprar ingresso</string>
     <string name="price_event_ticket">%1$.2f</string>
+    <string name="logout">Sair</string>
 
 </resources>

@@ -15,9 +15,11 @@
             android:background="@color/white"
             android:elevation="1dp"
             android:shadowColor="@color/black"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="" />
 
         <ImageView
             android:id="@+id/iv_logo_home"
@@ -29,21 +31,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar" />
-
-        <TextView
-            android:id="@+id/btn_register_event_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:elevation="1dp"
-            android:padding="12dp"
-            android:text="@string/btn_register_event_home"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:drawableEndCompat="@drawable/ic_arrow_go"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_home"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iv_logo_home" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home"

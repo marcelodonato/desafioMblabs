@@ -3,6 +3,8 @@ package com.marcelodonato.desafiomblabs.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
@@ -25,8 +27,26 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         startBinding()
         getOnDatabase()
-        btnGoToRegisterEvent()
-        logout()
+        toolbar()
+
+    }
+    private fun toolbar(){
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = ""
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.nav_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.logout -> logout()
+            R.id.create_event -> goToRegisterEventActivity()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onRestart() {
@@ -36,13 +56,12 @@ class HomeActivity : AppCompatActivity() {
 
     private fun logout() {
         user = FirebaseAuth.getInstance()
-        binding.ivLogoHome.setOnClickListener {
             user.signOut()
             startActivity(
                 Intent(this, LoginActivity::class.java)
             )
             finish()
-        }
+
     }
 
     private fun startBinding() {
@@ -78,12 +97,6 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         })
-    }
-
-    private fun btnGoToRegisterEvent() {
-        binding.btnRegisterEventHome.setOnClickListener {
-            goToRegisterEventActivity()
-        }
     }
 
     private fun goToRegisterEventActivity() {
