@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/create_event"
+        android:title="@string/btn_register_event_home" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout" />
+
+
+</menu>

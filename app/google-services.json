@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550109472609",
+    "project_id": "desafiomblabs",
+    "storage_bucket": "desafiomblabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550109472609:android:0fdadd6f4e9399f1168720",
+        "android_client_info": {
+          "package_name": "com.marcelodonato.desafiomblabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550109472609-t8o9nqc0i7japmg4oamhst0pis0v780m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_8TVz0ceKvvc1eNHD6G_0PVN2vqHZatw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550109472609-t8o9nqc0i7japmg4oamhst0pis0v780m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
