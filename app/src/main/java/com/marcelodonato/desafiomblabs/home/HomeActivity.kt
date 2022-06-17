@@ -28,20 +28,20 @@ class HomeActivity : AppCompatActivity() {
         startBinding()
         getOnDatabase()
         toolbar()
-
     }
-    private fun toolbar(){
+
+    private fun toolbar() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.nav_menu,menu)
+        menuInflater.inflate(R.menu.nav_menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.logout -> logout()
             R.id.create_event -> goToRegisterEventActivity()
         }
@@ -56,11 +56,11 @@ class HomeActivity : AppCompatActivity() {
 
     private fun logout() {
         user = FirebaseAuth.getInstance()
-            user.signOut()
-            startActivity(
-                Intent(this, LoginActivity::class.java)
-            )
-            finish()
+        user.signOut()
+        startActivity(
+            Intent(this, LoginActivity::class.java)
+        )
+        finish()
 
     }
 
