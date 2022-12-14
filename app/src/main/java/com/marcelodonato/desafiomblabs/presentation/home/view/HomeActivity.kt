@@ -11,7 +11,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.marcelodonato.desafiomblabs.R
-import com.marcelodonato.desafiomblabs.common.base.BaseActivity
+import com.marcelodonato.desafiomblabs.presentation.base.BaseActivity
 import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityHomeBinding

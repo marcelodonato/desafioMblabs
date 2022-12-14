@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.google.firebase.auth.FirebaseAuth
-import com.marcelodonato.desafiomblabs.common.base.BaseActivity
-import com.marcelodonato.desafiomblabs.common.base.BaseViewModel
+import com.marcelodonato.desafiomblabs.presentation.base.BaseActivity
+import com.marcelodonato.desafiomblabs.presentation.base.BaseViewModel
 import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.databinding.ActivitySplashBinding
 import com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity

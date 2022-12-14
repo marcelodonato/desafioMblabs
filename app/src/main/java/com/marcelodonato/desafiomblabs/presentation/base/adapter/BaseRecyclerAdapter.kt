@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.common.base.adapter
+package com.marcelodonato.desafiomblabs.presentation.base.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

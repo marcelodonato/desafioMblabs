@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.marcelodonato.desafiomblabs.R
-import com.marcelodonato.desafiomblabs.common.base.BaseActivity
-import com.marcelodonato.desafiomblabs.common.base.BaseViewModel
+import com.marcelodonato.desafiomblabs.presentation.base.BaseActivity
+import com.marcelodonato.desafiomblabs.presentation.base.BaseViewModel
 import com.marcelodonato.desafiomblabs.common.extension.confirmIfEmailIsValid
 import com.marcelodonato.desafiomblabs.common.extension.getEditText
 import com.marcelodonato.desafiomblabs.common.extension.validate

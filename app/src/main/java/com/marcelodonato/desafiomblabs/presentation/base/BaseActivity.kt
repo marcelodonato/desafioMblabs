@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.common.base
+package com.marcelodonato.desafiomblabs.presentation.base
 
 import android.content.Intent
 import android.graphics.Rect

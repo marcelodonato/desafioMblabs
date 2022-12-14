@@ -1,6 +1,6 @@
 package com.marcelodonato.desafiomblabs.presentation.login.presenter
 
-import com.marcelodonato.desafiomblabs.common.base.BaseViewModel
+import com.marcelodonato.desafiomblabs.presentation.base.BaseViewModel
 
 class LoginViewModel: BaseViewModel() {
 
