@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">Desafio Mblab\'s</string>
 
+
+    <string name="alert_internet_unavailable_title">Nenhuma conexão!</string>
+    <string name="alert_internet_unavailable_message">Não foi possível estabelecer conexão com a Internet, verifique sua conexão e tente novamente!</string>
+    <string name="alert_internet_unavailable_option_enable">Conexões</string>
+    <string name="alert_internet_unavailable_option_exit">Fechar</string>
+    <string name="select">Selecione…</string>
+    <string name="permission_denied">Infelizmente para acessar essa função precisamos de sua permissão.</string>
+    <string name="permission_rationale">Precisamos de sua permissão para acessar essa função.</string>
+    <string name="permission_never_ask">O  precisa dessa permissão para funcionar.</string>
+    <string name="permission_settings_button_label">Configurações</string>
+
+
     <!--Login Screen-->
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
@@ -39,4 +51,18 @@
     <string name="price_event_ticket">%1$.2f</string>
     <string name="logout">Sair</string>
 
+
+    <string name="error_generic">Ocorreu um problema, tente novamente.</string>
+
+
+    <string name="error_gallery_access" />
+
+    <string name="config_image_path_name">picture.jpeg</string>
+    <string name="config_edited_image_path_name">picture_edited.jpeg</string>
+    <string name="config_decoded_image">image.jpeg</string>
+
+    <string name="ok">OK</string>
+    <string name="back">VOLTAR</string>
+
+    <string name="alert_picture_error">Ocorreu um erro ao obter a sua foto, por favor tente novamente!</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.home
+package com.marcelodonato.desafiomblabs.presentation.home.view
 
 import android.app.Dialog
 import android.os.Bundle

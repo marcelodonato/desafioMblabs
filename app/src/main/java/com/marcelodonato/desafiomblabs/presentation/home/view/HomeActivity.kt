@@ -1,38 +1,32 @@
-package com.marcelodonato.desafiomblabs.home
+package com.marcelodonato.desafiomblabs.presentation.home.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.marcelodonato.desafiomblabs.R
+import com.marcelodonato.desafiomblabs.common.base.BaseActivity
+import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityHomeBinding
-import com.marcelodonato.desafiomblabs.login.LoginActivity
-import com.marcelodonato.desafiomblabs.registerEvent.RegisterEventActivity
+import com.marcelodonato.desafiomblabs.presentation.home.presenter.HomeViewModel
+import com.marcelodonato.desafiomblabs.presentation.login.view.LoginActivity
+import com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity<HomeViewModel>() {
 
-    private lateinit var binding: ActivityHomeBinding
+    override val binding by viewBinding(ActivityHomeBinding::inflate)
     private lateinit var user: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startBinding()
-        getOnDatabase()
         toolbar()
-    }
-
-    private fun toolbar() {
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = ""
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -54,6 +48,7 @@ class HomeActivity : AppCompatActivity() {
         getOnDatabase()
     }
 
+
     private fun logout() {
         user = FirebaseAuth.getInstance()
         user.signOut()
@@ -62,11 +57,6 @@ class HomeActivity : AppCompatActivity() {
         )
         finish()
 
-    }
-
-    private fun startBinding() {
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        binding.root
     }
 
     private fun setupRecycler(list: MutableList<MblabsEvents>) {
@@ -97,6 +87,11 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    private fun toolbar() {
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = ""
     }
 
     private fun goToRegisterEventActivity() {

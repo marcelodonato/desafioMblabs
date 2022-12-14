@@ -1,33 +1,28 @@
-package com.marcelodonato.desafiomblabs.splash
+package com.marcelodonato.desafiomblabs.presentation.splash.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import androidx.databinding.DataBindingUtil
+import android.os.Looper
 import com.google.firebase.auth.FirebaseAuth
-import com.marcelodonato.desafiomblabs.R
+import com.marcelodonato.desafiomblabs.common.base.BaseActivity
+import com.marcelodonato.desafiomblabs.common.base.BaseViewModel
+import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.databinding.ActivitySplashBinding
-import com.marcelodonato.desafiomblabs.home.HomeActivity
-import com.marcelodonato.desafiomblabs.login.LoginActivity
+import com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity
+import com.marcelodonato.desafiomblabs.presentation.login.view.LoginActivity
 
-class SplashActivity : AppCompatActivity() {
+@SuppressLint("CustomSplashScreen")
+class SplashActivity : BaseActivity<BaseViewModel>() {
 
-    private lateinit var binding: ActivitySplashBinding
+    override val binding by viewBinding(ActivitySplashBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startBinding()
-        Handler().postDelayed(
-            {
-                checkConnected()
-            }, 3000.toLong()
+        Handler(Looper.getMainLooper()).postDelayed(
+            { checkConnected() }, 3000.toLong()
         )
-    }
-
-    private fun startBinding() {
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
-        binding.root
     }
 
     private fun startWelcome() {

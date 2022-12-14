@@ -1,33 +1,28 @@
-package com.marcelodonato.desafiomblabs.login
+package com.marcelodonato.desafiomblabs.presentation.login.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.marcelodonato.desafiomblabs.R
+import com.marcelodonato.desafiomblabs.common.base.BaseActivity
 import com.marcelodonato.desafiomblabs.common.extension.confirmIfEmailIsValid
 import com.marcelodonato.desafiomblabs.common.extension.getEditText
 import com.marcelodonato.desafiomblabs.common.extension.validate
+import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.databinding.ActivityLoginBinding
-import com.marcelodonato.desafiomblabs.home.HomeActivity
-import com.marcelodonato.desafiomblabs.register.RegisterActivity
+import com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity
+import com.marcelodonato.desafiomblabs.presentation.login.presenter.LoginViewModel
+import com.marcelodonato.desafiomblabs.presentation.register.view.RegisterActivity
 
-class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+class LoginActivity : BaseActivity<LoginViewModel>() {
+    override val binding by viewBinding(ActivityLoginBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startBinding()
         clickToRegister()
         validatedLogin()
-    }
-
-    private fun startBinding() {
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        binding.root
     }
 
     private fun validateFields() {

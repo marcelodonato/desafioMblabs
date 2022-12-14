@@ -1,30 +1,25 @@
-package com.marcelodonato.desafiomblabs.register
+package com.marcelodonato.desafiomblabs.presentation.register.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.marcelodonato.desafiomblabs.R
+import com.marcelodonato.desafiomblabs.common.base.BaseActivity
+import com.marcelodonato.desafiomblabs.common.base.BaseViewModel
 import com.marcelodonato.desafiomblabs.common.extension.confirmIfEmailIsValid
 import com.marcelodonato.desafiomblabs.common.extension.getEditText
 import com.marcelodonato.desafiomblabs.common.extension.validate
+import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.databinding.ActivityRegisterBinding
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity : BaseActivity<BaseViewModel>() {
 
-    private lateinit var binding: ActivityRegisterBinding
+    override val binding by viewBinding(ActivityRegisterBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startBinding()
         registerButton()
-        goBackToLogin()
-    }
-
-    private fun startBinding() {
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
-        binding.root
+        backToLogin()
     }
 
     private fun validateFields() {
@@ -69,7 +64,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun goBackToLogin() {
+    private fun backToLogin() {
         binding.tvRegister.setOnClickListener {
             finish()
         }

@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.home
+package com.marcelodonato.desafiomblabs.presentation.home.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ class HomeAdapter(
     private val onItemClick: ((item: MblabsEvents, index: Int) -> Unit)? = null
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             EventItemBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -27,7 +27,7 @@ class HomeAdapter(
 
     inner class ViewHolder(var binding: EventItemBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onBindViewHolder(holder: HomeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val eventList = items[position]
 
         holder.binding.apply {

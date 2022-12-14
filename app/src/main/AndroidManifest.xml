@@ -14,7 +14,7 @@
         android:theme="@style/Theme.DesafioMblabs">
 
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="com.marcelodonato.desafiomblabs.presentation.splash.view.SplashActivity"
             android:exported="true"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
@@ -23,16 +23,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".login.LoginActivity"
+            android:name="com.marcelodonato.desafiomblabs.presentation.login.view.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".register.RegisterActivity"
+            android:name="com.marcelodonato.desafiomblabs.presentation.register.view.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".registerEvent.RegisterEventActivity"
+            android:name="com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity"
             android:exported="true" />
 
     </application>

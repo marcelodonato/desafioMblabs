@@ -1,4 +1,4 @@
-package com.marcelodonato.desafiomblabs.registerEvent
+package com.marcelodonato.desafiomblabs.presentation.registerEvent.view
 
 import android.app.Activity
 import android.content.Intent
