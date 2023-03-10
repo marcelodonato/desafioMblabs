@@ -17,6 +17,7 @@ import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityHomeBinding
 import com.marcelodonato.desafiomblabs.presentation.home.presenter.HomeViewModel
 import com.marcelodonato.desafiomblabs.presentation.login.view.LoginActivity
+import com.marcelodonato.desafiomblabs.presentation.profile.view.ProfileActivity
 import com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity
 
 class HomeActivity : BaseActivity<HomeViewModel>() {
@@ -36,6 +37,7 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.profile -> goToProfileActivity()
             R.id.logout -> logout()
             R.id.create_event -> goToRegisterEventActivity()
         }
@@ -96,6 +98,12 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
     private fun goToRegisterEventActivity() {
         val loginIntent = Intent(this, RegisterEventActivity::class.java)
+        startActivity(loginIntent)
+    }
+
+
+    private fun goToProfileActivity() {
+        val loginIntent = Intent(this, ProfileActivity::class.java)
         startActivity(loginIntent)
     }
 }

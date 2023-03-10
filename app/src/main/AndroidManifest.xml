@@ -35,5 +35,9 @@
             android:name="com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity"
             android:exported="true" />
 
+        <activity
+            android:name="com.marcelodonato.desafiomblabs.presentation.profile.view.ProfileActivity"
+            android:exported="true" />
+
     </application>
 </manifest>
