@@ -27,24 +27,14 @@
                 app:layout_constraintGuide_end="30dp" />
 
             <ImageView
-                android:id="@+id/btn_back_home"
-                android:layout_width="32dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_arrow_back"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
                 android:id="@+id/iv_register_event"
                 android:layout_width="0dp"
-                android:layout_height="300dp"
+                android:layout_height="0dp"
                 android:src="@drawable/img_default"
                 app:layout_constraintBottom_toTopOf="@id/tv_register_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_back_home" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_register_img"
@@ -108,11 +98,20 @@
                 android:text="@string/register_event_button"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/footer_bar"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@+id/et_register_event_price"
                 app:layout_constraintVertical_bias="0.0" />
+
+
+            <com.marcelodonato.desafiomblabs.presentation.uikit.AppFooterBar
+                android:id="@+id/footer_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <include
                 android:id="@+id/inc_loader"

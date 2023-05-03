@@ -16,11 +16,12 @@ import com.marcelodonato.desafiomblabs.R
 import com.marcelodonato.desafiomblabs.common.extension.toast
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.DialogBuyTicketBinding
+import com.marcelodonato.desafiomblabs.presentation.base.BaseDialog
 import com.marcelodonato.desafiomblabs.presentation.profile.view.ProfileActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-class CustomDialogBuyTicket(private val events: MblabsEvents) : DialogFragment() {
+class CustomDialogBuyTicket(private val events: MblabsEvents) : BaseDialog() {
 
     private var quantity: Int = 1
     private val format = "yyyy-MM-dd-HH-mm-ss-SSS"

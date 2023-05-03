@@ -19,6 +19,7 @@ import com.marcelodonato.desafiomblabs.presentation.home.presenter.HomeViewModel
 import com.marcelodonato.desafiomblabs.presentation.login.view.LoginActivity
 import com.marcelodonato.desafiomblabs.presentation.profile.view.ProfileActivity
 import com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity
+import kotlinx.android.synthetic.main.app_footer_bar.view.*
 
 class HomeActivity : BaseActivity<HomeViewModel>() {
 
@@ -28,6 +29,17 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         toolbar()
+        getOnDatabase()
+
+
+        binding.footerBar.profile.setOnClickListener {
+            goToProfileActivity()
+        }
+
+        binding.footerBar.addEvent.setOnClickListener {
+            goToRegisterEventActivity()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -101,9 +113,10 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
         startActivity(loginIntent)
     }
 
-
     private fun goToProfileActivity() {
         val loginIntent = Intent(this, ProfileActivity::class.java)
         startActivity(loginIntent)
     }
+
+
 }

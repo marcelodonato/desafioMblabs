@@ -1,5 +1,6 @@
 package com.marcelodonato.desafiomblabs.presentation.profile.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
@@ -12,8 +13,10 @@ import com.marcelodonato.desafiomblabs.common.extension.viewBinding
 import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityProfileBinding
 import com.marcelodonato.desafiomblabs.presentation.base.BaseActivity
+import com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity
 import com.marcelodonato.desafiomblabs.presentation.profile.presenter.ProfileViewModel
-import kotlinx.android.synthetic.main.activity_profile.*
+import com.marcelodonato.desafiomblabs.presentation.registerEvent.view.RegisterEventActivity
+import kotlinx.android.synthetic.main.app_footer_bar.view.*
 
 class ProfileActivity : BaseActivity<ProfileViewModel>() {
 
@@ -31,8 +34,13 @@ class ProfileActivity : BaseActivity<ProfileViewModel>() {
 
     private fun setupView() {
         binding.tvProfileName.text = "Marcelo"
-        btn_back_home.setOnClickListener {
-            finish()
+        binding.footerBar.home.setOnClickListener {
+            val homeIntent = Intent(this, HomeActivity::class.java)
+            startActivity(homeIntent)
+        }
+        binding.footerBar.addEvent.setOnClickListener {
+            val registerIntent = Intent(this, RegisterEventActivity::class.java)
+            startActivity(registerIntent)
         }
         if (intent.extras != null) {
             data = intent.extras

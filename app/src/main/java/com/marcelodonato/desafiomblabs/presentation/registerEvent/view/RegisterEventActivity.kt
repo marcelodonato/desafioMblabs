@@ -17,6 +17,9 @@ import com.marcelodonato.desafiomblabs.common.model.MblabsEvents
 import com.marcelodonato.desafiomblabs.databinding.ActivityRegisterEventBinding
 import java.util.*
 import com.google.firebase.storage.FirebaseStorage
+import com.marcelodonato.desafiomblabs.presentation.home.view.HomeActivity
+import com.marcelodonato.desafiomblabs.presentation.profile.view.ProfileActivity
+import kotlinx.android.synthetic.main.app_footer_bar.view.*
 import java.text.SimpleDateFormat
 
 class RegisterEventActivity : AppCompatActivity() {
@@ -31,6 +34,7 @@ class RegisterEventActivity : AppCompatActivity() {
         getImgGallery()
         registerEvent()
         goBackToHome()
+        goToProfileActivity()
     }
 
     private fun starBinding() {
@@ -144,8 +148,16 @@ class RegisterEventActivity : AppCompatActivity() {
     }
 
     private fun goBackToHome() {
-        binding.btnBackHome.setOnClickListener {
-            finish()
+        binding.footerBar.home.setOnClickListener {
+            val homeIntent = Intent(this, HomeActivity::class.java)
+            startActivity(homeIntent)
+        }
+    }
+
+    private fun goToProfileActivity() {
+        binding.footerBar.profile.setOnClickListener {
+            val loginIntent = Intent(this, ProfileActivity::class.java)
+            startActivity(loginIntent)
         }
     }
 }
